@@ -19,6 +19,25 @@ section, summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+@keyframes bgcolorchange {
+0% {
+    background: #3d6f98;
+}
+
+25% {
+    background: #015296;
+}
+50% {
+    background: #005f6f;
+}
+75% {
+    background: #1d7362;
+}
+100% {
+    background: #635e65;
+}
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
@@ -67,7 +86,10 @@ body {
     min-width: 320px; } }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  animation: bgcolorchange 20s infinite alternate;
+  background: #002544;
+}
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -94,7 +116,6 @@ body {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
- background-image: linear-gradient(45deg, #002544, #005f6f);
   padding: 6em 4em 4em 4em; }
   body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
@@ -373,7 +394,7 @@ header h6 + p {
   @media screen and (max-width: 1920px) {
   header br {
     display: none; } 
-  header img {
+  .headeritems {
     max-width: 30%;
     }
   }
@@ -381,7 +402,7 @@ header h6 + p {
 @media screen and (max-width: 980px) {
   header br {
     display: none; } 
-  header img {
+  .headeritems {
     max-width: 50%;
     }
   }
@@ -389,14 +410,14 @@ header h6 + p {
 @media screen and (max-width: 736px) {
   header br {
     display: inline; } 
-    header img {
+    .headeritems {
     max-width: 70%;
     }}
 
 @media screen and (max-width: 480px) {
   header br {
     display: none; } 
-    header img {
+    .headeritems {
     max-width: 100%;
     }}
 
